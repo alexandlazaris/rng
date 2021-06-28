@@ -16,5 +16,7 @@ function generate() {
   }
   console.table(generatedNumbers);
   console.log(`Duplicates: ${dups}`);
+  return generatedNumbers;
 }
-generate();
+
+module.exports = generate;

@@ -1,0 +1,18 @@
+{
+  "name": "rng",
+  "version": "1.0.0",
+  "description": "",
+  "main": "rng.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": "git@alexandlazaris/rng.git",
+  "author": "Alexander Lazaris <alex.lazaris617@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  },
+  "jest": {
+    "verbose": false
+  }
+}
