@@ -13,6 +13,6 @@
     "jest": "^27.0.6"
   },
   "jest": {
-    "verbose": false
+    "verbose": true
   }
 }
