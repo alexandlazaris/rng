@@ -1,9 +1,8 @@
-var maxLength = 5;
-var generatedNumbers = [];
-var dups = 0;
-var rndInt = 0;
-
-const generate = () => {
+const generate = (numbersToGenerate) => {
+  const maxLength = numbersToGenerate;
+  let generatedNumbers = [];
+  var dups = 0;
+  var rndInt = 0;
   while (generatedNumbers.length != maxLength) {
     rndInt = Math.floor(Math.random() * maxLength) + 1;
     if (!generatedNumbers.includes(rndInt)) {
@@ -14,9 +13,8 @@ const generate = () => {
       dups++;
     }
   }
-  console.table(generatedNumbers);
-  console.log(`Duplicates: ${dups}`);
-  return generatedNumbers;
+  const main = { randomNumbers: generatedNumbers, dups };
+  return main;
 };
 
 const generateObjects = (numbersToGenerate) => {
@@ -27,10 +25,10 @@ const generateObjects = (numbersToGenerate) => {
     while (numbersMap.size != numbersToGenerate) {
       rndInt = Math.floor(Math.random() * numbersToGenerate) + 1;
       if (!numbersMap.has(rndInt)) {
-        console.log(`${rndInt} is unique`);
+        console.log(`Random number generated: ${rndInt} is unique`);
         numbersMap.set(rndInt, { value: rndInt, counter: 1 });
       } else {
-        console.log(`${rndInt} is NOT unique`);
+        console.log(`Random number generated: ${rndInt} is NOT unique`);
         let counter = numbersMap.get(rndInt).counter;
         counter += 1;
         numbersMap.set(rndInt, { value: rndInt, counter: counter });

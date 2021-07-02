@@ -2,7 +2,10 @@ const { expect } = require("@jest/globals");
 const rng = require("../rng");
 
 test("Generate numbers array has length", () => {
-  expect(rng.generate()).toHaveLength(5);
+  const numbersToGenerate = 6;
+  expect(rng.generate(numbersToGenerate).randomNumbers).toHaveLength(
+    numbersToGenerate
+  );
 });
 
 test("Generate object size matches specified size", () => {
